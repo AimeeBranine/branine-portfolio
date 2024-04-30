@@ -42,49 +42,57 @@
                         <video width="1020" height="540" controls>
                             <source src="video/Capybara_Example.mp4" type="video/mp4">
                         </video>
-
-                        <img src="video/anteater_half.png">
-                        <img src="video/capybara_half.png">
-                        <img src="video/anteater_side.png">
-                        <img src="video/capybara_side.png">
+                        <div class="row">
+                            <div class="column">
+                                <img src="video/anteater_half.png">
+                                <img src="video/anteater_side.png">
+                                <div class="row">
+                                    <img src="video/capybara_half.png">
+                                    <img src="video/capybara_side.png">
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-<!-------------- Footer -------------------->
-<div id="footer">
-    <div class="container">
-        <nav>
-            <div class="footer">
-                <div class="row">
-                    <div class="column">
-                        <a href="https://www.linkedin.com/in/aimee-branine-a59292293/" target="_blank" rel="noopener noreferrer" class="social-links"><img src="Icons/linkedin_hover_icon.png" alt="LinkedIn"></a>
-                        <a href="https://www.artstation.com/aimeebranine" target="_blank" rel="noopener noreferrer" class="social-links"><img src="Icons/artstation_hover_icon.png" alt="Artstation"></a>
-                        <a href="https://aimalocaris.itch.io/" target="_blank" rel="noopener noreferrer" class="social-links"><img src="Icons/itchio_hover_icon.png" alt="Itch.io"></a>
+        <!-------------- Footer -------------------->
+        <div id="footer">
+            <div class="container">
+                <nav>
+                    <div class="footer">
+                        <div class="row">
+                            <div class="column">
+                                <a href="https://www.linkedin.com/in/aimee-branine-a59292293/" target="_blank" rel="noopener noreferrer" class="social-links"><img src="Icons/linkedin_hover_icon.png" alt="LinkedIn"></a>
+                            </div>
+                            <div class="column">
+                                <a href="https://www.artstation.com/aimeebranine" target="_blank" rel="noopener noreferrer" class="social-links"><img src="Icons/artstation_hover_icon.png" alt="Artstation"></a>
+                            </div>
+                            <div class="column">
+                                <a href="https://aimalocaris.itch.io/" target="_blank" rel="noopener noreferrer" class="social-links"><img src="Icons/itchio_hover_icon.png" alt="Itch.io"></a>
+                            </div>
+                        </div>
                     </div>
-                </div>
+                </nav>
             </div>
-        </nav>
-    </div>
-</div>
+        </div>
 
-    <!------ On Click Function -------->
-    <script>
-        var tablinks = document.getElementsByClassName("tab-links");
-        var tabcontents = document.getElementsByClassName("tab-contents");
-        function opentab(tabname) {
-            for (tablink of tablinks) {
-                tablink.classList.remove("active-link");
+        <!------ On Click Function -------->
+        <script>
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+            function opentab(tabname) {
+                for (tablink of tablinks) {
+                    tablink.classList.remove("active-link");
+                }
+                for (tabcontent of tabcontents) {
+                    tabcontent.classList.remove("active-tab");
+                }
+                window.event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab");
             }
-            for (tabcontent of tabcontents) {
-                tabcontent.classList.remove("active-tab");
-            }
-            window.event.currentTarget.classList.add("active-link");
-            document.getElementById(tabname).classList.add("active-tab");
-        }
-    </script>
+        </script>
 
 </body>
 </html>
