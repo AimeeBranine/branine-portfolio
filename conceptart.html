@@ -35,26 +35,157 @@
         <div class="container">
             <h1 class="sub-title">Concept Art</h1>
             <div class="concepts">
+                <h2 class="page-subTitle">Cyberpunk-Sport Exploration</h2>
+                <p>An exploration of what sports would be like in a cyberpunk world.</p>
                 <div class="row">
                     <div class="column">
-                        <h2 class="page-subTitle">Cyberpunk-Sport Exploration</h2>
-                        <p>An exploration of what sports would be like in a cyberpunk world.</p>
-                        <img src="Cyberpunk/characternojacket.png">
-                        <img src="Cyberpunk/characternojacket.png">
-                        <img src="Cyberpunk/cyberpunk_char_idea.png">
-                        <img src="Cyberpunk/prop_0.png">
+                        <img src="Cyberpunk/characternojacket.png" onclick="openModal();currentSlide(1)" class="hover-shadow">
+                    </div>
+                    <div class="column">
+                        <img src="Cyberpunk/example_concept_art_temp.png" onclick="openModal();currentSlide(2)" class="hover-shadow">
+                    </div>
+                    <div class="column">
+                        <img src="Cyberpunk/cyberpunk_char_idea.png" onclick="openModal();currentSlide(3)" class="hover-shadow">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column">
+                        <img src="Cyberpunk/prop_00.png" onclick="openModal();currentSlide(4)" class="hover-shadow">
+                    </div>
+                    <div class="column">
+                        <img src="Cyberpunk/prop_11.png" onclick="openModal();currentSlide(5)" class="hover-shadow">
+                    </div>
+                    <div class="column">
+                        <img src="Cyberpunk/env_0.png" onclick="openModal();currentSlide(6)" class="hover-shadow">
+                    </div>
+                </div>
 
-                        <h2 class="page-subTitle">Grim Reaper Redesigns</h2>
-                        <p>Character and prop concept excercise by replacing the word 'Grim' in the Grim Reaper.</p>
-                        <img src="Reapers/noirreaper_sheet.png">
-                        <img src="Reapers/lifereaper.png">
-                        <img src="Reapers/coralreaper.png">
-                        <img src="Reapers/dinoreaper.jpg">
+                <h2 class="page-subTitle">Grim Reaper Redesigns</h2>
+                <p>Character and prop concept excercise by replacing the word 'Grim' in the Grim Reaper.</p>
+                <div class="row">
+                    <div class="column">
+                        <img src="Reapers/noirreaper_sheet.png" onclick="openModal();currentSlide(7)" class="hover-shadow">
+                    </div>
+                    <div class="column">
+                        <img src="Reapers/lifereaper.png" onclick="openModal();currentSlide(8)" class="hover-shadow">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column">
+                        <img src="Reapers/coralreaper.png" onclick="openModal();currentSlide(9)" class="hover-shadow">
+                    </div>
+                    <div class="column">
+                        <img src="Reapers/dinoreaper.jpg" onclick="openModal();currentSlide(10)" class="hover-shadow">
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- The Modal/Lightbox -->
+    <div id="myModal" class="modal">
+        <span class="close cursor" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+
+            <div class="mySlides">
+                <div class="numbertext">1 / 10</div>
+                <img src="Cyberpunk/characternojacket.png" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">2 / 10</div>
+                <img src="Cyberpunk/example_concept_art_temp.png" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">3 / 10</div>
+                <img src="Cyberpunk/cyberpunk_char_idea.png" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">4 / 10</div>
+                <img src="Cyberpunk/prop_00.png" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">5 / 10</div>
+                <img src="Cyberpunk/prop_11.png" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">6 / 10</div>
+                <img src="Cyberpunk/env_0.png" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">7 / 10</div>
+                <img src="Reapers/noirreaper_sheet.png" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">8 / 10</div>
+                <img src="Reapers/lifereaper.png" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">9 / 10</div>
+                <img src="Reapers/coralreaper.png" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">10 / 10</div>
+                <img src="Reapers/dinoreaper.jpg" style="width:100%">
+            </div>
+
+            <!-- Next/previous controls -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            <!-- Caption text -->
+            <div class="caption-container">
+                <p id="caption"></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Open the Modal
+        function openModal() {
+            document.getElementById("myModal").style.display = "block";
+        }
+
+        // Close the Modal
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+        }
+
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("demo");
+            var captionText = document.getElementById("caption");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            captionText.innerHTML = dots[slideIndex - 1].alt;
+        }
+    </script>
 
     <!-------------- Footer -------------------->
     <div id="footer">
