@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Projects</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-------------- NAV BAR ----------->
+    <div id="topnav">
+        <div class="container">
+            <nav>
+                <img src="images/Portfolio_Logo.png" alt="logo"> <!-- Add Logo Image Later -->
+                <ul>
+                    <li><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropbtn">Portfolio</a>
+                        <div class="dropdown-content">
+                            <a class="nav-link" href="conceptart.html">Concept Art</a>
+                            <a class="nav-link" href="projects.html">Projects</a>
+                            <a class="nav-link" href="illustration.html">Illustrations</a>
+                            <a class="nav-link" href="other.html">Other</a>
+                        </div>
+                    </li>
+                    <li><a class="nav-link" href="about.html">About</a></li>
+                    <li><a href="#Contact">Contact</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </div>
+
+    <!-------------- Projects -------------------->
+    <div id="Projects">
+        <div class="container">
+            <h1 class="sub-title">Penguin Noir 2022-2023</h1>
+            <p>
+                Penguin Noir is a comedic pinball-inspired platformer where the player is Giuseppe Squawks a private eye who, along with his friend
+                Tony the Octopus, is trying to solve the mystery of his girlfriend's disappearance.
+            </p>
+            <p>
+                For this game, I worked on initial character concepts, background art, UI,
+                tilesets and comic book pages.
+            </p>
+            <div class="projects">
+                <div class="row">
+                    <div class="column">
+                        <h2 class="page-subTitle">Main Character Concepts</h2>
+                        <img src="images/Penguin Noir/Characters/character_concept.png">
+                        <img src="images/Penguin Noir/Characters/character_colorkey_0.png">
+                        <img src="images/Penguin Noir/Characters/character_colorkey_1.png">
+                        <img src="images/Penguin Noir/Characters/character_colorkey_2.png">
+                        <br>
+                        <h2 class="page-subTitle">Enemy Character Concepts</h2>
+                        <img src="images/Penguin Noir/Characters/seal0.png">
+                        <img src="images/Penguin Noir/Characters/seal1.png">
+                        <img src="images/Penguin Noir/Characters/seal2.png">
+                        <br>
+                        <img src="images/Penguin Noir/Characters/narwhal0.png">
+                        <img src="images/Penguin Noir/Characters/narwhal2.png">
+                        <br>
+                        <h2 class="page-subTitle">Comics</h2>
+                        <img src="images/Penguin Noir/Comics/comic17.png">
+                        <img src="images/Penguin Noir/Comics/comic18.png">
+                        <img src="images/Penguin Noir/Comics/comic31.png">
+                        <img src="images/Penguin Noir/Comics/comic32.png">
+                        <br>
+                        <h2 class="page-subTitle">User Interface Concepts</h2>
+                        <img src="images/Penguin Noir/UI/UI Concept Sheet.png">
+                        <img src="images/Penguin Noir/UI/tileset.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-------------- Footer -------------------->
+<div id="footer">
+    <div class="container">
+        <nav>
+            <div class="footer">
+                <div class="row">
+                    <div class="column">
+                        <a href="https://www.linkedin.com/in/aimee-branine-a59292293/" target="_blank" rel="noopener noreferrer" class="social-links"><img src="images/Icons/linkedin_hover_icon.png" alt="LinkedIn"></a>
+                        <a href="https://www.artstation.com/aimeebranine" target="_blank" rel="noopener noreferrer" class="social-links"><img src="images/Icons/artstation_hover_icon.png" alt="Artstation"></a>
+                        <a href="https://aimalocaris.itch.io/" target="_blank" rel="noopener noreferrer" class="social-links"><img src="images/Icons/itchio_hover_icon.png" alt="Itch.io"></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>
+
+    <!------ On Click Function -------->
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            window.event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+
+</body>
+</html>

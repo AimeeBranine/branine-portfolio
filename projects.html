@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Projects</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-------------- NAV BAR ----------->
+    <div id="topnav">
+        <div class="container">
+            <nav>
+                <img src="images/Portfolio_Logo.png" alt="logo"> <!-- Add Logo Image Later -->
+                <ul>
+                    <li><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropbtn">Portfolio</a>
+                        <div class="dropdown-content">
+                            <a class="nav-link" href="conceptart.html">Concept Art</a>
+                            <a class="nav-link" href="projects.html">Projects</a>
+                            <a class="nav-link" href="illustration.html">Illustrations</a>
+                            <a class="nav-link" href="other.html">Other</a>
+                        </div>
+                    </li>
+                    <li><a class="nav-link" href="about.html">About</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </div>
+
+    <!-------------- Projects -------------------->
+    <div id="Projects">
+        <div class="container">
+            <h1 class="sub-title">Projects</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/Penguin Noir/Comics/comic18.png">
+                    <div class="layer">
+                        <a class="nav-link" href="penguinnoir.html"><h3>Penguin Noir</h3></a>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/FramebyFrame/page_Header.png">
+                    <div class="layer">
+                        <a class="nav-link" href="framebyframe.html"><h3>Frame-by-Frame</h3></a>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr width="100%;" color="#ff6361" size="5">
+
+<!-------------- Footer -------------------->
+<div id="footer">
+    <div class="container">
+        <nav>
+            <div class="footer">
+                <div class="row">
+                    <div class="column">
+                        <a href="https://www.linkedin.com/in/aimee-branine-a59292293/" target="_blank" rel="noopener noreferrer" class="social-links"><img src="images/Icons/linkedin_hover_icon.png" alt="LinkedIn"></a>
+                        <a href="https://www.artstation.com/aimeebranine" target="_blank" rel="noopener noreferrer" class="social-links"><img src="images/Icons/artstation_hover_icon.png" alt="Artstation"></a>
+                        <a href="https://aimalocaris.itch.io/" target="_blank" rel="noopener noreferrer" class="social-links"><img src="images/Icons/itchio_hover_icon.png" alt="Itch.io"></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>
+
+    <!------ On Click Function -------->
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            window.event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+
+</body>
+</html>

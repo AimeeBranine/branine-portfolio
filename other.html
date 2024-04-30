@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Other</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-------------- NAV BAR ----------->
+    <div id="topnav">
+        <div class="container">
+            <nav>
+                <img src="images/Portfolio_Logo.png" alt="logo">
+                <ul>
+                    <li><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropbtn">Portfolio</a>
+                        <div class="dropdown-content">
+                            <a class="nav-link" href="conceptart.html">Concept Art</a>
+                            <a class="nav-link" href="projects.html">Projects</a>
+                            <a class="nav-link" href="illustration.html">Illustrations</a>
+                            <a class="nav-link" href="other.html">Other</a>
+                        </div>
+                    </li>
+                    <li><a class="nav-link" href="about.html">About</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </div>
+
+    <div id="Other">
+        <div class="container">
+            <h1 class="sub-title">Other</h1>
+            <div class="work-list">
+                <div class="row">
+                    <div class="column">
+                        <video width="1020" height="540" controls>
+                            <source src="images/video/Anteater_Example.mp4" type="video/mp4">
+                        </video>
+                        <video width="1020" height="540" controls>
+                            <source src="images/video/Capybara_Example.mp4" type="video/mp4">
+                        </video>
+
+                        <img src="images/video/anteater_half.png">
+                        <img src="images/video/capybara_half.png">
+                        <img src="images/video/anteater_side.png">
+                        <img src="images/video/capybara_side.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-------------- Footer -------------------->
+<div id="footer">
+    <div class="container">
+        <nav>
+            <div class="footer">
+                <div class="row">
+                    <div class="column">
+                        <a href="https://www.linkedin.com/in/aimee-branine-a59292293/" target="_blank" rel="noopener noreferrer" class="social-links"><img src="images/Icons/linkedin_hover_icon.png" alt="LinkedIn"></a>
+                        <a href="https://www.artstation.com/aimeebranine" target="_blank" rel="noopener noreferrer" class="social-links"><img src="images/Icons/artstation_hover_icon.png" alt="Artstation"></a>
+                        <a href="https://aimalocaris.itch.io/" target="_blank" rel="noopener noreferrer" class="social-links"><img src="images/Icons/itchio_hover_icon.png" alt="Itch.io"></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>
+
+    <!------ On Click Function -------->
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            window.event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+
+</body>
+</html>
