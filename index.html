@@ -1,0 +1,178 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Branine_Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-------------- HEADER ----------->
+    <div id="header">
+        <div class="container">
+            <nav>
+                <div class="header-text">
+                    <h1>Aimée Branine</h1>
+                    <p>Concept Artist</p>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <!-------------- NAV BAR ----------->
+    <div id="topnav">
+        <div class="container">
+            <nav>
+                <img src="Icons/Portfolio_Logo.png" alt="logo">
+                <ul>
+                    <li><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropbtn">Portfolio</a>
+                        <div class="dropdown-content">
+                            <a class="nav-link" href="conceptart.html">Concept Art</a>
+                            <a class="nav-link" href="projects.html">Projects</a>
+                            <a class="nav-link" href="illustration.html">Illustrations</a>
+                            <a class="nav-link" href="other.html">Other</a>
+                        </div>
+                    </li>
+                    <li><a class="nav-link" href="about.html">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <hr width="100%;" color="#ff6361" size="5">
+    <!------ Portfolio -------->
+    <div id="Portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="Cyberpunk/example_concept_art_temp.png">
+                    <div class="layer">
+                        <h3>Concept Art</h3>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="FramebyFrame/screenshot_0.png">
+                    <div class="layer">
+                        <h3>Projects</h3>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="example_work_temp.png">
+                    <div class="layer">
+                        <h3>Illustrations</h3>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="video/example_3D_work.png">
+                    <div class="layer">
+                        <h3>Other</h3>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr width="100%;" color="#ff6361" size="5">
+    <!--------------- Slideshow -------------->
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <img src="Cyberpunk/characternojacket.png" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="images/art_temp.png" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="Reapers/noirreaper.png" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+            <img src="fatalereaper.png" style="width:100%">
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+    <br>
+
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+    <hr width="100%;" color="#ff6361" size="5">
+
+<!-------------- Footer -------------------->
+<div id="footer">
+    <div class="container">
+        <nav>
+            <div class="footer">
+                <div class="row">
+                    <div class="column">
+                        <a href="https://www.linkedin.com/in/aimee-branine-a59292293/" target="_blank" rel="noopener noreferrer" class="social-links"><img src="Icons/linkedin_hover_icon.png" alt="LinkedIn"></a>
+                        <a href="https://www.artstation.com/aimeebranine" target="_blank" rel="noopener noreferrer" class="social-links"><img src="Icons/artstation_hover_icon.png" alt="Artstation"></a>
+                        <a href="https://aimalocaris.itch.io/" target="_blank" rel="noopener noreferrer" class="social-links"><img src="Icons/itchio_hover_icon.png" alt="Itch.io"></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>
+
+    <!------ On Click Function -------->
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            window.event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+
+
+    <!--------- Slideshow Function ---------->
+    <!--------- Manual Slideshow Function ---------->
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 10000); // Change image every 10 seconds
+        }
+
+    </script>
+
+    <script>
+
+     </script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Projects</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-------------- NAV BAR ----------->
+    <div id="topnav">
+        <div class="container">
+            <nav>
+                <img src="Icons/Portfolio_Logo.png" alt="logo">
+                <ul>
+                    <li><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropbtn">Portfolio</a>
+                        <div class="dropdown-content">
+                            <a class="nav-link" href="conceptart.html">Concept Art</a>
+                            <a class="nav-link" href="projects.html">Projects</a>
+                            <a class="nav-link" href="illustration.html">Illustrations</a>
+                            <a class="nav-link" href="other.html">Other</a>
+                        </div>
+                    </li>
+                    <li><a class="nav-link" href="about.html">About</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </div>
+
+    <!-------------- Projects -------------------->
+    <div id="Projects">
+        <div class="container">
+            <h1 class="sub-title">Frame-by-Frame 2024</h1>
+            <p>
+                It is 1933 and you are a silent film actress about to star in her first 'talkie' film.
+                However, when someone on the film is murdered a mysterious entity reveals itself to you.
+                It agrees to help you find the murderer but at a great cost should you get it wrong.
+                Use public domain films try to find out who among the studio is the murderer.
+            </p>
+            <br>
+            <p>
+                This was a solo-dev game done for my senior Capstone project at UCCS and was inspired by old Hollywood films and film history.
+            </p>
+            <div class="projects">
+                <div class="row">
+                    <div class="column">
+                        <h2 class="page-subTitle">Character Designs</h2>
+                        <img src="FramebyFrame/char_0.png">
+                        <img src="FramebyFrame/char_1.png">
+                        <img src="FramebyFrame/char_2.png">
+                        <img src="FramebyFrame/char_3.png">
+                        <h2 class="page-subTitle">Background Designs</h2>
+                        <img src="FramebyFrame/bg_0.png">
+                        <img src="FramebyFrame/bg_1.png">
+                        <img src="FramebyFrame/bg_2.png">
+                        <img src="FramebyFrame/bg_3.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-------------- Footer -------------------->
+<div id="footer">
+    <div class="container">
+        <nav>
+            <div class="footer">
+                <div class="row">
+                    <div class="column">
+                        <a href="https://www.linkedin.com/in/aimee-branine-a59292293/" target="_blank" rel="noopener noreferrer" class="social-links"><img src="Icons/linkedin_hover_icon.png" alt="LinkedIn"></a>
+                        <a href="https://www.artstation.com/aimeebranine" target="_blank" rel="noopener noreferrer" class="social-links"><img src="Icons/artstation_hover_icon.png" alt="Artstation"></a>
+                        <a href="https://aimalocaris.itch.io/" target="_blank" rel="noopener noreferrer" class="social-links"><img src="Icons/itchio_hover_icon.png" alt="Itch.io"></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>
+
+    <!------ On Click Function -------->
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            window.event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+
+</body>
+</html>
